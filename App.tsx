@@ -1,18 +1,15 @@
 import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import { Provider as ProviderAntDesign } from '@ant-design/react-native';
 import { Provider } from 'react-redux';
 import store from './src/store/store';
-import MapLocation from './src/screens/map/MapLocation'; 
+import { BText } from '@components';
 
 function App(): JSX.Element {
     return (
         <Provider store={store}>
-            <ProviderAntDesign>
-                <SafeAreaView style={styles.container}>
-                    <MapLocation />
-                </SafeAreaView>
-            </ProviderAntDesign>
+            <SafeAreaView style={styles.container}>
+                <BText>Testing the text</BText>
+            </SafeAreaView>
         </Provider>
     );
 }

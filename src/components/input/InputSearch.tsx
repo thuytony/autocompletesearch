@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
-import { StyleSheet, ViewStyle, ActivityIndicator } from 'react-native';
-import { View, InputItem } from '@ant-design/react-native';
+import { StyleSheet, ViewStyle, ActivityIndicator, TextInput, View } from 'react-native';
 import * as icons from '@assets';
 import { Dimension, useThemeApp, ColorType } from '@theme';
 import { IconImageButton } from '../button';
@@ -51,9 +50,9 @@ const InputSearch: React.FC<InputSearchProps> = (props: InputSearchProps) => {
       <View style={inputSearchStyle}>
         {leftComponent}
         <View style={styles.inputContainer}>
-            <InputItem
+            <TextInput
                 value={value}
-                onChange={onChangeText}
+                onChangeText={onChangeText}
                 placeholder={placeholder}
                 editable={editable}
                 style={styles.input}

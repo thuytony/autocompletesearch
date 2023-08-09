@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-import { Button } from '@ant-design/react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { Dimension } from '@theme';
 
 type SearchResultProps = {
@@ -16,9 +15,9 @@ const SearchResult: React.FC<SearchResultProps> = (props: SearchResultProps) => 
   } = props;
 
     return (
-      <Button style={styles.container} onPress={onPress}>
+      <TouchableOpacity style={styles.container} onPress={onPress}>
         <Text>{title}</Text>
-      </Button>
+      </TouchableOpacity>
     );
 
 }
